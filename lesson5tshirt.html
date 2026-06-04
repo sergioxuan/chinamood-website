@@ -1,223 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+  <title>White T-shirt | Studio Rong</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
 
-<style>
-  
-*{
-  box-sizing: border-box;
-}
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      color: #111;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
 
-.product-page
+    .product-page {
+      display: flex;
+      gap: 30px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
 
-{
-display: flex;
-gap:30px;
-padding: 40px;
-max-width: 900px;
-margin:0 auto;
-align-items:flex-start;
+    .product-images {
+      width: 420px;
+    }
 
-}
+    .product-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 16px;
+    }
 
-.product-imgs
-{
-width: 420px;
-}
+    .product-info {
+      max-width: 300px;
+      padding: 24px;
+      position: sticky;
+      top: 40px;
+    }
 
-.product-img
-{
-width:100%;
-height:auto;
-display:block;
-margin-bottom: 16px;
-}
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
 
-.product-info
-{
-max-width: 300px;
-padding: 24px;
-position: sticky;
-top: 40px; 
-}
+    .back,
+    .color,
+    .price {
+      font-size: 11px;
+    }
 
+    .description,
+    .model,
+    .preorder-info {
+      font-family: 'Lora', serif;
+      font-size: 11px;
+    }
 
-p{
-margin-bottom:20px;
-}
+    .description,
+    .model,
+    .preorder-info {
+      line-height: 1.5;
+    }
 
-button
-{
-width:100%;
-height:40px;
-margin-bottom:16px;
-display:block;
-box-sizing: border-box;
-}
+    .preorder-info {
+      margin-bottom: 8px;
+    }
 
-.back,.color,.price
-{
-font-size:11px;
-}
-.description,.model
-{
-font-family:'lora', serif;
-font-size:11px;
-}
+    .preorder-title {
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
 
-.description
-{
-line-height: 1.5;
-}
+    .preorder-button {
+      width: 100%;
+      height: 40px;
+      display: block;
+      text-align: center;
+      line-height: 40px;
+      border: 1px solid #111;
+      color: #111;
+      text-decoration: none;
+      font-size: 12px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
 
-.select
-{
-font-size: 12px;
-font-weight: bold;
-}
+    .preorder-button:hover {
+      background-color: #111;
+      color: #fff;
+    }
 
-</style>
+    /* 手机端：图片变成横向滑动，文字在下面 */
+    @media (max-width: 768px) {
+      .product-page {
+        display: block;
+        padding: 0;
+        max-width: none;
+      }
+
+      .product-images {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .product-image {
+        min-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+        scroll-snap-align: start;
+      }
+
+      .product-info {
+        max-width: none;
+        width: 100%;
+        position: static;
+        padding: 24px 20px 40px;
+      }
+    }
+
+  </style>
 
 </head>
 
-
-
-
-
 <body>
 
-<div class="product-page">
+  <div class="product-page">
 
-    <div class="product-imgs">
-
-     <img class="product-img" src="images/suzhou-01.PNG">
-     <img class="product-img" src="images/suzhou-02.PNG">
-     <img class="product-img" src="images/suzhou-03.PNG">
-     <img class="product-img" src="images/suzhou-04.PNG">
-     <img class="product-img" src="images/suzhou-05.PNG">
+    <div class="product-images">
+      <img class="product-image" src="images/suzhou-01.PNG" alt="White heavyweight T-shirt front view">
+      <img class="product-image" src="images/suzhou-02.PNG" alt="White heavyweight T-shirt detail">
+      <img class="product-image" src="images/suzhou-03.PNG" alt="White heavyweight T-shirt fit">
+      <img class="product-image" src="images/suzhou-04.PNG" alt="White heavyweight T-shirt collar detail">
+      <img class="product-image" src="images/suzhou-05.PNG" alt="White heavyweight T-shirt fabric detail">
     </div>
 
-  <div class="product-info">
-<p class="back">back</p>
-<p class="color">White</p>
-<p class="price">70</P>
-<P class="description">Echoing our J90, the J2000 T-shirt’s design is inspired by 
-  80/90’s tour merch, enhanced with a baggier, boxier fit while maintaining the 
-  signature single stitch and thick collar.
-</P>
-<p class="model">Model is 6’2” wearing size Large</p>
-<p class="select">Select</p>
-<button class="size-button"> 
-  size
-</button>
+    <div class="product-info">
 
-<div id='product-component-1780465830413'></div>
-<script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: '080ir4-1f.myshopify.com',
-      storefrontAccessToken: '52075657281cee669c675de634b2413e',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: '9533777379605',
-        node: document.getElementById('product-component-1780465830413'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        }
-      }
-    },
-    "buttonDestination": "checkout",
-    "contents": {
-      "img": false,
-      "title": false,
-      "price": false
-    },
-    "text": {
-      "button": "Buy now"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {}
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-</script>
+      <p class="back">back</p>
 
-   </div>
+      <p class="color">White</p>
 
-</div>
+      <p class="price">€70</p>
+
+      <p class="description">
+        Echoing our J90, the J2000 T-shirt’s design is inspired by 
+        80/90’s tour merch, enhanced with a baggier, boxier fit while maintaining the 
+        signature single stitch and thick collar.
+      </p>
+
+      <p class="model">
+        Model is 6’2” wearing size Large
+      </p>
+
+      <p class="preorder-title">
+        Pre-order
+      </p>
+
+      <p class="preorder-info">Price: €70</p>
+      <p class="preorder-info">Deposit to reserve: €15</p>
+      <p class="preorder-info">Remaining balance due before shipping</p>
+      <p class="preorder-info">Delivery after July 3 from Milan</p>
+
+      <a class="preorder-button" href="https://wa.me/393458724721?text=Hi%2C%20I%20would%20like%20to%20reserve%20the%20white%20T-shirt.%20My%20size%20is%20" target="_blank">
+        Pre-order on WhatsApp
+      </a>
+
+    </div>
+
+  </div>
 
 </body>
 
-<address></address>
+</html>
+
