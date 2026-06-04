@@ -1,15 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html,
     body {
       margin: 0;
+      padding: 0;
       background-color: white;
     }
 
@@ -20,12 +25,31 @@
 
     .home-image-link {
       display: block;
+      width: 100%;
     }
 
     .home-image {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    /* 手机端：横版图片铺满一整屏，居中裁切 */
+    @media (max-width: 768px) {
+      .home-image-link {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        overflow: hidden;
+      }
+
+      .home-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
     }
   </style>
 </head>
@@ -35,10 +59,12 @@
   <div class="home-page">
 
     <a class="home-image-link" href="lesson5tshirt.html">
-      <img class="home-image" src="images/home-tshirt-hanging.png">
+      <img class="home-image" src="images/home-tshirt-hanging.png" alt="White T-shirt hanging on wall">
     </a>
 
   </div>
 
 </body>
+
 </html>
+
